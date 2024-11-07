@@ -49,7 +49,7 @@ class BookSpider(scrapy.Spider):
             "//th[text()='UPC']/following-sibling::td//text()"
         ).get()
 
-        yield dict(
+        return dict(
             title=title,
             price=price,
             amount_in_stock=amount_in_stock,
